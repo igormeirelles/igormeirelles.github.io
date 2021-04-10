@@ -1,4 +1,4 @@
-#version 300 es
+#version 120
 
 in vec4 fColor;
 out vec4 outColor;
@@ -307,7 +307,7 @@ f 74/74/74 75/75/75 67/67/67
 f 69/69/69 71/71/71 72/72/72
 f 72/72/72 59/59/59 75/75/75
 f 75/75/75 74/74/74 72/72/72
-#version 300 es
+#version 120
 
 layout(location = 0) in vec3 inPosition;
 
@@ -325,7 +325,7 @@ void main() {
   fColor = vec4(1, i, i, 1) * color;
 
   gl_Position = projMatrix * posEyeSpace;
-}#version 300 es
+}#version 120
 
 out vec4 outColor;
 
@@ -28168,7 +28168,7 @@ f 4346/6323/6323 4349/6327/6327 3402/6937/6937
 f 3403/6938/6938 3404/6939/6939 4344/6320/6320
 f 4344/6320/6320 4347/6324/6324 3403/6938/6938
 f 4627/6941/6941 4345/6321/6321 3404/6939/6939
-#version 300 es
+#version 120
 
 layout(location = 0) in vec3 inPosition;
 
