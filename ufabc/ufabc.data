@@ -1,9 +1,11 @@
 #version 410
 
-in vec4 fColor;
 out vec4 outColor;
 
-void main() { outColor = fColor; }v -233.988892 142.984619 376.994812
+void main() {
+  float i = 1.0 - gl_FragCoord.z;
+  outColor = vec4(0, i, 0, 1);
+}v -233.988892 142.984619 376.994812
 v -376.994751 0.000000 376.994812
 v -376.994751 1813.988037 376.994812
 v 376.994873 1813.988037 376.994812
@@ -324,13 +326,6 @@ void main() {
   fColor = vec4(1, i, i, 1) * color;
 
   gl_Position = projMatrix * posEyeSpace;
-}#version 410
-
-out vec4 outColor;
-
-void main() {
-  float i = 1.0 - gl_FragCoord.z;
-  outColor = vec4(0, i, 0, 1);
 }v -640.906677 1100.681885 569.198181
 v -644.795044 1033.173218 569.416260
 v -640.899170 1100.681274 569.198181
@@ -28166,7 +28161,12 @@ f 4346/6323/6323 4349/6327/6327 3402/6937/6937
 f 3403/6938/6938 3404/6939/6939 4344/6320/6320
 f 4344/6320/6320 4347/6324/6324 3403/6938/6938
 f 4627/6941/6941 4345/6321/6321 3404/6939/6939
-#version 410 core
+#version 410
+
+in vec4 fColor;
+out vec4 outColor;
+
+void main() { outColor = fColor; }#version 410 core
 
 layout(location = 0) in vec3 inPosition;
 
